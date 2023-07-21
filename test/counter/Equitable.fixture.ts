@@ -5,7 +5,7 @@ import hre from "hardhat";
 import type { Equitable } from "../../types/Equitable";
 import { waitForBlock } from "../../utils/block";
 
-export async function deployEquitableFixture(): Promise<{ counter: Equitable; address: string }> {
+export async function deployEquitableFixture(): Promise<{ equitable: Equitable; address: string }> {
   const signers = await ethers.getSigners();
   const admin = signers[0];
 

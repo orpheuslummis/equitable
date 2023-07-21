@@ -4,7 +4,7 @@ import hre from "hardhat";
 import { waitForBlock } from "../../utils/block";
 import { createFheInstance } from "../../utils/instance";
 import type { Signers } from "../types";
-import { basicTest } from "./Equitable.behavior";
+import { setupTest } from "./Equitable.behavior";
 import { deployEquitableFixture, getTokensFromFaucet } from "./Equitable.fixture";
 
 describe("Unit tests", function () {
@@ -13,8 +13,8 @@ describe("Unit tests", function () {
     // get tokens from faucet if we're on localfhenix and don't have a balance
     await getTokensFromFaucet();
     // deploy test contract
-    const { counter, address } = await deployEquitableFixture();
-    this.counter = counter;
+    const { equitable, address } = await deployEquitableFixture();
+    this.equitable = equitable;
     // initiate fhevmjs
     this.instance = await createFheInstance(hre, address);
     // set admin account/signer
@@ -24,7 +24,7 @@ describe("Unit tests", function () {
     await waitForBlock(hre);
   });
 
-  describe("basicEquitable", function () {
-    basicTest();
+  describe("equitableTests", function () {
+    setupTest();
   });
 });
