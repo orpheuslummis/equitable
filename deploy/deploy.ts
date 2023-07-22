@@ -5,14 +5,14 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   const { deployer } = await hre.getNamedAccounts();
   const { deploy } = hre.deployments;
 
-  const counter = await deploy("Counter", {
+  const equitable = await deploy("Equitable", {
     from: deployer,
     args: [],
     log: true,
     skipIfAlreadyDeployed: false,
   });
 
-  console.log(`Counter contract: `, counter.address);
+  console.log(`equitable contract: `, equitable.address);
 };
 
 export default func;
