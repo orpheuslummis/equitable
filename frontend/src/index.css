@@ -1,0 +1,37 @@
+/* src/index.css */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+
+/* Ajouter des règles CSS personnalisées ici */
+body {
+  background-color: #f9f9f9;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.button {
+  background-color: #f2f2f2; 
+  border: 1px solid black; 
+  border-radius: 10px; 
+  cursor: pointer;
+}
+
+.important-button {
+  background-color: rgb(51 65 85);
+  border: 1px solid black; 
+  color: white;
+  border-radius: 10px; 
+  cursor: pointer;
+
+}
+
+/* styles.css (ou tout autre fichier .css) */
+.input-field {
+  min-height: 40px; /* ou ajuste la hauteur selon tes besoins */
+}
+
+.span-field {
+  min-height: 40px; /* ou ajuste la hauteur selon tes besoins */
+}
